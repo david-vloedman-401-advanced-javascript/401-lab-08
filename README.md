@@ -1,6 +1,6 @@
-# LAB - 07
+# LAB - 08
 
-## API Server
+## Express Routing and Connected API
 
 ### Author: David Vloedman
 
@@ -19,7 +19,7 @@
 
 * npm install
 
-#### How to initialize/run your server app (where applicable)
+#### How to initialize/run your server app
 
 * npm start
   
@@ -29,4 +29,4 @@
 
 #### UML
 
-![](./assets/lab07.png)
+![](./assets/lab08.png)
