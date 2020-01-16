@@ -1,7 +1,7 @@
 
 
 const Model = require('./mongoModel');
-const schema = require('./productSchema');
+const schema = require('./categorySchema');
 /**
  * @class
  */

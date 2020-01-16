@@ -96,7 +96,7 @@ function getCategory(request, response, next) {
   
   categories
     .get(request.params.id)
-    .then(result => response.status(200).json(result[0]))
+    .then(result => response.status(200).json(result))
     .catch(next);
 }
 
@@ -113,7 +113,7 @@ function putCategories(request, response, next) {
   // expects the record that was just updated in the database
   categories
     .put(request.params.id, request.body)
-    .then(result => response.status(200).json(result[0]))
+    .then(result => response.status(200).json(result))
     .catch(next);
 }
 
