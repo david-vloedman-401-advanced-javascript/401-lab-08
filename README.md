@@ -1,4 +1,4 @@
-# LAB - 07
+# LAB - 08
 
 ## API Server
 
@@ -29,4 +29,4 @@
 
 #### UML
 
-![](./assets/lab07.png)
+![](./assets/lab08.png)
