@@ -1,11 +1,10 @@
 {
-  "name": "class-02",
+  "name": "api-server-solution",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "directories": {
-    "doc": "docs",
-    "lib": "lib"
+  "jest": {
+    "testEnvironment": "node"
   },
   "scripts": {
     "test": "jest --verbose --coverage",
@@ -15,13 +14,21 @@
     "jsdoc": "jsdoc -c ./docs/config/jsdoc.config.json"
   },
   "keywords": [],
-  "author": "",
+  "author": "David Vloedman",
   "license": "ISC",
   "dependencies": {
+    "@code-fellows/supergoose": "^1.0.1",
+    "@david-vloedman/mymongomodel": "^1.0.0",
+    "cors": "^2.8.5",
+    "dotenv": "^8.0.0",
     "eslint": "^6.8.0",
     "express": "^4.17.1",
-    "faker": "^4.1.0",
-    "jest": "^24.9.0",
-    "supertest": "^4.0.2"
+    "jest": "^24.8.0",
+    "mongodb-memory-server": "^5.1.5",
+    "mongoose": "^5.6.1",
+    "mongoose-schema-jsonschema": "^1.2.1",
+    "morgan": "^1.9.1",
+    "supertest": "^4.0.2",
+    "uuid": "^3.3.2"
   }
 }
