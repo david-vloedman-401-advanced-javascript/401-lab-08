@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Home</title>
+    <title>JSDoc: Source: __tests__/supergoose.js</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,32 +17,58 @@
 
 <div id="main">
 
-    <h1 class="page-title">Home</h1>
+    <h1 class="page-title">Source: __tests__/supergoose.js</h1>
 
     
 
 
 
     
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>'use strict';
+/**
+ * Combines SuperTest and Mongoose Memory Server
+ * to reduce (hopefully) the pain of
+ * testing a Mongoose API
+ */
 
+const mongoose = require('mongoose');
+const { default: MongoMemoryServer } = require('mongodb-memory-server');
+module.exports = require('supertest');
 
-    <h3> </h3>
+let mongoServer;
 
+async function startDB() {
+  mongoServer = new MongoMemoryServer();
 
+  const mongoUri = await mongoServer.getConnectionString();
 
+  const mongooseOptions = {
+    useNewUrlParser: true,
+    useCreateIndex: true,
+  };
 
+  await mongoose.connect(mongoUri, mongooseOptions);
+}
 
+async function stopDB() {
+  await mongoose.disconnect();
+  mongoServer &amp;&amp; await mongoServer.stop();
+}
 
+beforeAll(startDB);
+afterAll(stopDB);
 
-
-
-
-    
-
-
-
-
-
+if (!module.parent) {
+  describe('supergoose', () => {
+    it('can connect', async () => {
+      expect(mongoose.connection.db).toBeDefined();
+    });
+  });
+}</code></pre>
+        </article>
+    </section>
 
 
 
