@@ -42,8 +42,8 @@ class Model {
    * @param {object} record
    * @returns {function}
    */
-  update(_id, record) {
-   
+  put(_id, record) {
+    console.log(_id, record);
     if (_id && record) {      
       return this.schema.findByIdAndUpdate(_id, record, { new: true });
     } else {

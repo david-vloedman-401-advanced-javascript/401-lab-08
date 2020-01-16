@@ -1,11 +1,11 @@
-'use strict';
 
-const DataModel = require('./mongoModel');
+
+const Model = require('./mongoModel');
 const schema = require('./productSchema');
 /**
  * @class
  */
-class Categories extends DataModel {
+class Categories extends Model {
   constructor() {
     super(schema);
   }

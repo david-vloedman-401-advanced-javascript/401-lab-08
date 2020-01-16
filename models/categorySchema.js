@@ -2,22 +2,11 @@
 
 const mongoose = require('mongoose');
 
-const categories = new mongoose.Schema({
-  category_id: {
-    type: 'string',
-    required: true,
-  },
-  price: {
-    type: 'number',
-    require: true,
-  },
-  weight: {
-    type: 'number',
-  },
-  quantity_in_stock: {
-    type: 'number',
-    required: true,
-  },
+const categories = new mongoose.Schema({  
+  category_id: { type: String, required: true},
+  price: { type: Number, required: true },
+  weight: { type: Number, required: true },
+  quantity_in_stock: { type: Number, required: true },
 });
 /**
  * @function 
