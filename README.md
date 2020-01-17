@@ -8,7 +8,7 @@
 
 * [submission PR](https://github.com/david-vloedman-401-advanced-javascript/401-lab-08/pull/1)
 * [travis](https://www.travis-ci.com/david-vloedman-401-advanced-javascript/401-lab-08)
-* [heroku](https://serene-bayou-78571.herokuapp.com/)
+* [heroku](https://mighty-gorge-40947.herokuapp.com/)
 
 
 
