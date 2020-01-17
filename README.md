@@ -31,4 +31,4 @@
 
 #### UML
 
-![](./assets/lab08.png)
+![](./assets/lab-08.png)
